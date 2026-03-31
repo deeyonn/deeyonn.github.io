@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deon — Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <nav id="navbar">
+    <a href="#hero" class="nav-brand">&gt; deon_</a>
+    <ul class="nav-links">
+      <li><a href="#about">about</a></li>
+      <li><a href="#projects">projects</a></li>
+      <li><a href="#blog">blog</a></li>
+      <li><a href="#contact">contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
+
+  <section id="hero">
+    <canvas id="avatar-canvas" width="96" height="96" aria-label="Pixel art avatar"></canvas>
+    <div class="hero-text">
+      <p class="hero-greeting">hello, world. i am</p>
+      <h1 class="glitch" data-text="DEON">DEON</h1>
+      <p class="hero-tagline">
+        <span id="typewriter"></span><span class="cursor" aria-hidden="true">&#9608;</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn">view_projects()</a>
+        <a href="#contact" class="btn btn-ghost">contact_me()</a>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">[ scroll ]</a>
+  </section>
+
+  <main>
+
+    <section id="about" class="fade-in">
+      <div class="section-header">
+        <h2><span class="prompt">&gt;</span> about.exe</h2>
+        <div class="header-line"></div>
+      </div>
+      <div class="about-layout">
+        <div class="bio-text">
+          <p>
+            Hi! I'm <span class="hl">Deon</span>, a software developer who enjoys
+            building things and occasionally breaking them to understand how they work.
+          </p>
+          <p>
+            I like clean code, retro aesthetics, and turning coffee into commits.
+            This site is a living document — it changes as I do.
+          </p>
+        </div>
+        <div class="player-card panel">
+          <p class="panel-title">// player.stats</p>
+          <div class="stat-row">
+            <span class="stat-key">name</span>
+            <span class="stat-sep">::</span>
+            <span class="stat-val">Deon</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">class</span>
+            <span class="stat-sep">::</span>
+            <span class="stat-val">Software Developer</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">location</span>
+            <span class="stat-sep">::</span>
+            <span class="stat-val">Earth, mostly</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">status</span>
+            <span class="stat-sep">::</span>
+            <span class="stat-val blink">online &#9646;</span>
+          </div>
+          <div class="stat-row">
+            <span class="stat-key">xp</span>
+            <span class="stat-sep">::</span>
+            <span class="stat-val">&#8734;</span>
+          </div>
+        </div>
+      </div>
+      <div class="skills-section panel">
+        <p class="panel-title">// skills.load()</p>
+        <div class="skills-grid" id="skills-grid"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="fade-in">
+      <div class="section-header">
+        <h2><span class="prompt">&gt;</span> projects.log</h2>
+        <div class="header-line"></div>
+      </div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
+
+    <section id="blog" class="fade-in">
+      <div class="section-header">
+        <h2><span class="prompt">&gt;</span> blog.txt</h2>
+        <div class="header-line"></div>
+      </div>
+      <div class="blog-list" id="blog-list"></div>
+      <p class="muted">// more posts coming soon...</p>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <div class="section-header">
+        <h2><span class="prompt">&gt;</span> contact.sh</h2>
+        <div class="header-line"></div>
+      </div>
+      <p class="contact-intro">Want to work together or just say hi? My inbox is open.</p>
+      <div class="contact-links" id="contact-links"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>built with &#9829; and caffeine &nbsp;|&nbsp; <span class="hl">deon</span> &copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
