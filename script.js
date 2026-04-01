@@ -5,60 +5,97 @@
 const DATA = {
 
   typewriterLines: [
-    'software developer',
-    'builder of things',
-    'pixel art enthusiast',
-    'coffee enjoyer',
+    'software engineer',
+    'security & IAM specialist',
+    'cloud & automation builder',
+    'security-first developer',
   ],
 
   skills: [
-    // Replace with your actual skills
-    'JavaScript', 'TypeScript', 'Python',
-    'React', 'Node.js', 'SQL',
-    'Docker', 'Git', 'Linux',
-    'REST APIs', 'etc.',
+    'AutoHotkey', 'AWS CloudWatch', 'AWS IAM', 'AWS Lambda',
+    'BeanShell', 'C', 'C#', 'C++', 'CSS',
+    'Figma', 'GitHub', 'Go', 'Heroku', 'HTML5',
+    'Java', 'JavaScript', 'Kali Linux', 'Keras',
+    'ML.NET', 'NATS', 'Node.js',
+    'PHP', 'Postman', 'PowerBI', 'PyTorch', 'Python',
+    'REST APIs', 'Rust', 'SailPoint IIQ/ISC', 'ServiceNow',
+    'Slack API', 'SQL', 'Tableau', 'Telegram API', 'TensorFlow',
+    'UiPath', 'Vim', 'Vue.js',
+  ],
+
+  certs: [
+    { name: 'Google AI Essentials Specialization',            issuer: 'Google',   date: 'Sep 2025' },
+    { name: 'Google Prompting Essentials Specialization',     issuer: 'Google',   date: 'Sep 2025' },
+    { name: 'Maximize Productivity With AI Tools',            issuer: 'Coursera', date: 'Sep 2025' },
+    { name: 'Use AI as a Creative or Expert Partner',         issuer: 'Coursera', date: 'Sep 2025' },
+    { name: 'Use AI Responsibly',                             issuer: 'Coursera', date: 'Sep 2025' },
+    { name: 'Stay Ahead of the AI Curve',                     issuer: 'Coursera', date: 'Sep 2025' },
+    { name: 'Design Prompts for Everyday Work Tasks',         issuer: 'Coursera', date: 'Sep 2025' },
+    { name: 'Discover the Art of Prompting',                  issuer: 'Coursera', date: 'Sep 2025' },
+    { name: 'Speed Up Data Analysis and Presentation Building', issuer: 'Coursera', date: 'Sep 2025' },
+    { name: 'Introduction to AI',                             issuer: 'Coursera', date: 'Sep 2025' },
+    { name: 'Start Writing Prompts like a Pro',               issuer: 'Coursera', date: 'Aug 2025' },
   ],
 
   projects: [
-    // Replace with your actual projects
     {
-      title: 'Project Alpha',
-      desc: 'A short description of what this project does and why it was built.',
-      tags: ['JavaScript', 'Node.js'],
-      github: 'https://github.com/your-username/project-alpha',
+      title: 'IAM Lifecycle Workflows',
+      desc: 'Designed and implemented joiner-mover-leaver provisioning workflows at CPF Board using SailPoint IIQ/ISC, with custom BeanShell rules, plugins, and compliance reports for audit evidence generation.',
+      tags: ['SailPoint IIQ/ISC', 'BeanShell', 'Java'],
+      github: null,
       live: null,
     },
     {
-      title: 'Project Beta',
-      desc: 'Another project. Replace these placeholders with your real work.',
-      tags: ['Python', 'Docker'],
-      github: 'https://github.com/your-username/project-beta',
-      live: 'https://example.com',
+      title: 'Serverless Slack App',
+      desc: 'Revamped a GovTech internal Slack application on AWS Lambda, achieving a 33% codebase reduction by migrating from text to visual Block Kit UI. Integrated CloudWatch structured logging, cutting log size by 60%.',
+      tags: ['AWS Lambda', 'Python', 'Slack API', 'CloudWatch'],
+      github: null,
+      live: null,
+    },
+    {
+      title: 'N-Gram Bot Suggestion Engine',
+      desc: 'Built a pre-computed trigram similarity engine for a trading platform\'s bot command suggestions at TransactCloud, reducing query time by 10x. Managed real-time message routing via NATS messaging infrastructure.',
+      tags: ['Java', 'NATS', 'Algorithms'],
+      github: null,
+      live: null,
+    },
+    {
+      title: 'Sentiment Analysis Prototype',
+      desc: 'Built a two-iteration sentiment analysis system at Singtel, improving accuracy from 62.3% to 89.0% between versions. Presented findings to clients and the department director.',
+      tags: ['Python', 'ML', 'NLP'],
+      github: null,
+      live: null,
+    },
+    {
+      title: 'ServiceNow Legacy Integration',
+      desc: 'Integrated a legacy Singtel product with ServiceNow via Node.js, cutting daily compute time from 10 hours to 33 minutes and significantly improving server response times.',
+      tags: ['Node.js', 'ServiceNow', 'Automation'],
+      github: null,
+      live: null,
     },
     {
       title: 'This Website',
-      desc: 'My personal site. Pure HTML, CSS, and vanilla JS with a Bitburner-inspired pixel art aesthetic.',
+      desc: 'My personal portfolio. Zero-dependency static site built with pure HTML, CSS, and vanilla JS — Bitburner-inspired pixel art aesthetic.',
       tags: ['HTML', 'CSS', 'JavaScript'],
-      github: 'https://github.com/your-username/your-username.github.io',
+      github: 'https://github.com/deeyonn',
       live: null,
     },
   ],
 
   blog: [
-    // Add blog posts here, or hook up a CMS later
     {
-      date: '2026-03-31',
+      date: '2026-04-01',
       title: 'Hello, World',
-      desc: 'First post. Site is live. More coming soon.',
+      desc: 'Site is live. More coming soon.',
       tags: ['meta'],
       url: '#',
     },
   ],
 
   contact: [
-    { label: 'email',    icon: '✉', href: 'mailto:you@example.com' },
-    { label: 'github',   icon: '⌥', href: 'https://github.com/your-username' },
-    { label: 'linkedin', icon: '◈', href: 'https://linkedin.com/in/your-profile' },
+    { label: 'email',    icon: '✉', href: 'mailto:deeyonn@gmail.com' },
+    { label: 'github',   icon: '⌥', href: 'https://github.com/deeyonn' },
+    { label: 'linkedin', icon: '◈', href: 'https://linkedin.com/in/deon-tan' },
   ],
 
 };
@@ -153,6 +190,22 @@ function renderSkills() {
   grid.innerHTML = DATA.skills
     .map(s => `<span class="skill-tag">${s}</span>`)
     .join('');
+}
+
+
+// ════════════════════════════════════════════
+// RENDER CERTS
+// ════════════════════════════════════════════
+
+function renderCerts() {
+  const list = document.getElementById('certs-list');
+  if (!list) return;
+  list.innerHTML = DATA.certs.map(c => `
+    <div class="cert-item">
+      <span class="cert-name">${c.name}</span>
+      <span class="cert-meta">${c.issuer} · ${c.date}</span>
+    </div>
+  `).join('');
 }
 
 
@@ -274,6 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
   drawAvatar();
   typewriter();
   renderSkills();
+  renderCerts();
   renderProjects();
   renderBlog();
   renderContact();

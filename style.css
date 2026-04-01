@@ -548,6 +548,33 @@ section { padding: var(--section-gap) 0; }
 }
 
 /* ════════════════════════════════════════════
+   CERTS
+════════════════════════════════════════════ */
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--green-dim);
+}
+
+.cert-item:last-child {
+  border-bottom: none;
+}
+
+.cert-name {
+  color: var(--text);
+  font-size: 0.75rem;
+}
+
+.cert-meta {
+  color: var(--text-dim);
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+/* ════════════════════════════════════════════
    FOOTER
 ════════════════════════════════════════════ */
 footer {
